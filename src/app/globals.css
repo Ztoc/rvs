@@ -8,7 +8,10 @@
   --rvs-green: #04a143;
   --rvs-green-dark: #062a2b;
   --rvs-green-dark-light: #0f7272;
+  --rvs-gray: #EFEFEF;
+  --rvs-blue-light  : #35767A;
 }
+
 
 @theme inline {
   --color-background: var(--background);
@@ -20,6 +23,8 @@
   --color-rvs-green: var(--rvs-green);
   --color-rvs-green-dark: var(--rvs-green-dark);
   --color-rvs-green-dark-light: var(--rvs-green-dark-light);
+  --color-rvs-gray: var(--rvs-gray);
+  --color-rvs-blue-light: var(--rvs-blue-light);
 }
 
 
@@ -82,6 +87,11 @@
   }
   .animate-slide-in-down {
     animation: slideInDown 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .font-18 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
   }
 }
 

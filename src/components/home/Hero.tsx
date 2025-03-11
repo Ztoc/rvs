@@ -1,15 +1,17 @@
 import Image from "next/image";
-import ArrowUpRight from "@/components/icons/ArrowUpRight";
+
 import Carousel from "@/components/Carousel";
+import ArrowUpRight from "@/components/icons/ArrowUpRight";
 
 const images = [
   "/assets/hero-image.webp",
   "/assets/bottom-bg.png",
   "/assets/hero-image.webp",
 ];
+
 const Hero = () => {
   return (
-    <div className="flex items-center flex-col justify-center bg-white py-[90px] px-[238px] mt-[100px] relative">
+    <div className="flex items-center flex-col justify-center bg-white py-[90px] px-[238px] mt-[80px] md:mt-[100px] relative">
       <Image
         src="/assets/arrow-up-yellow.svg"
         alt="hero-image"
@@ -25,7 +27,7 @@ const Hero = () => {
           Bridging the gap between Ideas and Execution. <br />
           Accelerate your growth with technology.
         </p>
-        <button className="bg-rvs-green text-white px-[30px] py-[18px] rounded-[30px] flex items-center gap-[10px] text-center w-fit font-bold">
+        <button className="bg-rvs-green text-white px-[30px] py-[18px] rounded-[30px] flex items-center gap-[10px] text-center w-fit font-bold cursor-pointer">
           Know more <ArrowUpRight color="white" />
         </button>
       </div>

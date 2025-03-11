@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import ServiceCarousel from "./ServiceCarousel";
 
 const Service = () => {
