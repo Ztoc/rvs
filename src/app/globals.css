@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --rvs-yellow: #ffd00b;
+  --rvs-green-light: #e4ffed;
+  --rvs-green: #04a143;
+  --rvs-green-dark: #062a2b;
+  --rvs-green-dark-light: #0f7272;
 }
 
 @theme inline {
@@ -10,12 +15,73 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-rvs-yellow: var(--rvs-yellow);
+  --color-rvs-green-light: var(--rvs-green-light);
+  --color-rvs-green: var(--rvs-green);
+  --color-rvs-green-dark: var(--rvs-green-dark);
+  --color-rvs-green-dark-light: var(--rvs-green-dark-light);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@layer components {
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .animate-slide-in-up {
+    animation: slideInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .animate-slide-in-down {
+    animation: slideInDown 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 }
 
